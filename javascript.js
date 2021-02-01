@@ -1,31 +1,40 @@
-document.getElementById("button1").addEventListener("click",function(){
-    document.getElementById("box").style.height = "250px"
+
+const box = document.getElementById("box")
+const grow = document.getElementById('grow')
+const blue = document.getElementById('blue')
+const fade = document.getElementById('fade')
+const border = document.getElementById('border')
+const textButton = document.getElementById('text')
+const resetButton = document.getElementById('reset')
+
+grow.addEventListener("click", function () {
+    box.style.height = "250px"
     console.log('grow button clicked')
 })
 
-document.getElementById("button2").addEventListener("click",function(){
-    document.getElementById("box").style.backgroundColor = "blue"
+blue.addEventListener("click", function () {
+    box.style.backgroundColor = "blue"
     console.log('Blue button clicked')
 })
 
-document.getElementById("button3").addEventListener("click",function(){
-    document.getElementById("box").style.opacity = "25%"
+fade.addEventListener("click", function () {
+    box.style.opacity = "25%"
     console.log('Fade button clicked')
 })
-document.getElementById("border").addEventListener("click",function(){
-    document.getElementById("box").style.borderRadius = "25%"
-    console.log('Fade button clicked')
-})
-
-document.getElementById("text").addEventListener("click",function(){
-    document.getElementById("box").textContent = 'Im a box' 
-    document.getElementById("box").style.textAlign = 'center'
-    console.log('Fade button clicked')
+border.addEventListener("click", function () {
+    box.style.borderRadius = "25%"
+    console.log('Border button clicked')
 })
 
-document.getElementById("button4").addEventListener("click",function(){
-    document.getElementById("box").style="height:150px; width:150px; background-color:orange; margin:25px"
-    document.getElementById("box").textContent = '' 
+textButton.addEventListener("click", function () {
+    box.textContent = 'Im a box'
+    box.style.textAlign = 'center'
+    console.log('Text button clicked')
+})
+
+resetButton.addEventListener("click", function () {
+    box.style = "height:150px; width:150px; background-color:orange; margin:25px"
+    box.textContent = ''
 
     console.log('Reset button clicked')
 })
